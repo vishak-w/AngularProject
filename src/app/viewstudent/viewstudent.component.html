@@ -1,0 +1,23 @@
+ <!-- <div>
+  <input #search (keyup)="0" type="text" class="form-control" placeholder="Search " />
+</div>
+<ul class="list-group list-group-flush" >
+  <li class="list-group-item"  *ngFor="let stu of stud.student | search:search.value"> <span [ngClass]="{red: todo.done}">{{stu.name}}</span></li>
+</ul>  -->
+<div class="tb">
+  <table>
+
+    <thead><th>Pid</th><th>Id</th><th>Name</th><th>Age</th><th>lastname</th><th>Address</th><th>Action</th></thead>
+
+
+<tr *ngFor="let stud of stud.student;index as i;">
+  <td scope="row">{{i + 1}}</td>
+        <td>{{stud.id}}</td>
+        <td>{{stud.name}}</td>
+        <td>{{stud.age}}</td>
+        <td>{{stud.lastname}}</td>
+        <td>{{stud.address}}</td>
+        <td><button type="button" class="btn btn-danger" (click)="deleteStudent(stud.id)"> Delete </button></td>
+    </tr>
+  </table>
+</div>

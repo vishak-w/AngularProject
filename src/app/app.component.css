@@ -1,0 +1,18 @@
+.side_container{
+    background-color: white;
+ }
+ .side_navcon{
+     width:200px;
+     background-color:rgb(242, 243, 243)
+ 
+ }
+ .list_color a:hover{
+ 
+     background-color: blue;
+     color: black;
+ }
+ .mat-elevation-z5{
+ 
+     position: relative;
+     z-index: 2;
+ }

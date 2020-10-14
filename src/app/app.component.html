@@ -1,0 +1,31 @@
+<mat-toolbar>
+  
+  <span>My App</span>
+  <span class="example-spacer"></span>
+  
+</mat-toolbar>
+
+<mat-sidenav-container class="side_container"> 
+  <mat-sidenav  mode="side" opened class ="side_navcon">
+  <mat-nav-list class="list_color">
+    
+    <a  mat-list-item routerLink='register'>Dashboard</a>
+    <mat-divider></mat-divider>
+    <a  mat-list-item routerLink='view'>View</a>
+    <a mat-list-item>Student</a>
+     <mat-divider></mat-divider>
+    <a mat-list-item>Staff</a>
+    <mat-divider></mat-divider>
+    <a mat-list-item>Attendance</a>
+    <mat-divider></mat-divider>
+    <a mat-list-item>About</a>
+     <mat-divider></mat-divider>
+    <a mat-list-item>ContactUs</a>
+  </mat-nav-list>
+  </mat-sidenav>
+   <mat-sidenav-content>
+     <p style="height:88vh">
+       <router-outlet></router-outlet>
+     </p>  
+     </mat-sidenav-content>   
+  </mat-sidenav-container>

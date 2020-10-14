@@ -1,0 +1,36 @@
+
+<h4>Register</h4>
+<div class="frm" >
+<form [formGroup]="register" (submit)="registerStudent(id.value,name.value,age.value,lastname.value,address.value)">
+    <mat-form-field>
+        <input matInput  #id formControlName="id"  type="text" placeholder="id*">
+        <mat-error #id *ngIf="register.get('id').invalid">Enter min 10 Characters.</mat-error>
+      </mat-form-field>
+      
+     <br>
+    <mat-form-field>
+      <input matInput  #name formControlName="name"  type="text" placeholder="Name*">
+      <mat-error *ngIf="register.get('name').invalid">Enter min 10 Characters.</mat-error>
+    </mat-form-field>
+    <br>
+    
+    <mat-form-field>
+        <input matInput  #age formControlName="age"  type="text" placeholder="Age*">
+        <mat-error *ngIf="register.get('age').invalid">Enter min 10 Characters.</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input matInput  #lastname formControlName="lastname"  type="text" placeholder="LastName*">
+        <mat-error *ngIf="register.get('lastname').invalid">Enter min 10 Characters.</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field>
+        <input matInput  #address formControlName="address"  type="text" placeholder="address*">
+        <mat-error *ngIf="register.get('address').invalid">Enter min 10 Characters.</mat-error>
+      </mat-form-field>
+      <br>
+      <button mat-button type="submit" color="primary">Register</button>
+   
+  </form>
+
+</div>
